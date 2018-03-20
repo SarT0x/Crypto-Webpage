@@ -1,3 +1,4 @@
+
 Highcharts.chart('container', {
 
     title: {
@@ -47,10 +48,10 @@ Highcharts.chart('container', {
         name: 'Other',
         data: [12908, 11248, 8105, 11248, 8989, 11816, 18274, 18111]
     }, {
-        name: 'Other',
+        name: 'Etherium',
         data: [12908, 18274, 8105, 11248, 8989, 11248, 18274, 18111]
     }, {
-        name: 'Other',
+        name: 'BitCoin',
         data: [12908, 5948, 8105, 11248, 8989, 18274, 18274, 18111]
     }],
 
