@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CRYPTOWEB | Portefeuille</title>
+	<meta content="" name="description">
+	<meta content="" name="author">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="" name="keywords">
+
+	<link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="asset/index-style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<script src="lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="lib/popper.min.js" type="text/javascript"></script>
+	<script src="lib/bootstrap-4.0.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="asset/index-js.js" type="text/javascript"></script>
+</head>
+<body>
+	<section id="menu" class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top mynav">
+			<a class="navbar-brand" href="index.html">CRYPTOWEB</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			    	<li class="nav-item">
+			        	<a class="nav-link" href="index.html" >Accueil</a>
+			        </li>        
+			        <li class="nav-item active">
+			        	<a class="nav-link" href="wallet.html" target="_blank">Portefeuille</a>
+			        </li>
+			    </ul>			    
+		    </div>
+		</nav>	
+	</section>
+
+	<section id="myWallet">
+		<div class="container">
+			<div class="row">
+				<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Portefeuille</h5>
+				<div id="account" class="col-lg-12 col-md-12 col-sm-12 text-center">					
+					<p>Vous disposez de : 15000,23 €</p>
+					<p>Nom et nombre de cryptomonnaies possédees :</p>
+					<ul class="nav justify-content-center">
+  						<li class="nav-item">
+    						<a class="nav-link" href="#"> 152.054 BTC</a>
+					  	</li>
+					  	<li class="nav-item">
+					   		<a class="nav-link" href="#">152.054 BTC</a>
+					  	</li>
+					  	<li class="nav-item">
+					    	<a class="nav-link" href="#">152.054 BTC</a>
+					  	</li>					  	
+					</ul>					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="historical">
+		<div class="container">
+			<div class="row">
+				<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Historique des transactions</h5>
+				<div class="col-lg-12 col-md-12 col-sm-12" id="scrollable-array">
+					<table class="table table-hover">
+						<thead class="thead-dark">
+							<tr>
+							  <th scope="col">#</th>
+							  <th scope="col">Cryptomonnaie</th>
+							  <th scope="col">Gain (cryptomonnaie)</th>
+							  <th scope="col">Gain (€)</th>
+							  <th scope="col">Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							  <th scope="row">1</th>
+							  <td>Mark</td>
+							  <td>Otto</td>
+							  <td>@mdo</td>
+							  <td>@mdo</td>
+							</tr>
+							<tr>
+							  <th scope="row">2</th>
+							  <td>Jacob</td>
+							  <td>Thornton</td>
+							  <td>@fat</td>
+							  <td>@mdo</td>
+							</tr>
+							<tr>
+							  <th scope="row">3</th>
+							  <td>Larry</td>
+							  <td>the Bird</td>
+							  <td>@twitter</td>
+							  <td>@mdo</td>
+							</tr>
+							<tr>
+							  <th scope="row">3</th>
+							  <td>Larry</td>
+							  <td>the Bird</td>
+							  <td>@twitter</td>
+							  <td>@mdo</td>
+							</tr>	
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="transactions">
+		<div class="container">
+			<div class="row">
+				<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Effectuer des transactions</h5>
+				<div id="deal" class="col-lg-12 col-md-12 col-sm-12">
+					<div id="buy" class="col-lg-5 col-md-5 col-sm-5 float-left">
+						<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Acheter</h5>
+						<form method="post" class="col-lg-12 col-md-12 col-sm-12 text-center">
+							<select id="nameCrypto" name="nameCrypto">
+								<option value="">Sélectionnez</option>
+								<option value="BTC">BTC - Bitcoin</option>
+								<option value="ETH">ETH - Ethereum</option>
+								<option value="EOS">EOS - EOS</option>
+								<option value="LTC">LTC - Litecoin</option>
+								<option value="XRP">XRP - Ripple</option>
+								<option value="TRX">TRX - Tronix</option>
+								<option value="BCH">BCH - Bitcoin Cash</option>
+								<option value="XVG">XVG - Verge</option>
+								<option value="ETC">ETC - Ethereum Classic</option>
+								<option value="NEO">NEO - NEO</option>
+							</select>
+							<input type="number" id="nbCrypto" name="nbCrypto" placeholder="">
+							<br>
+							<br>
+							<label>Prix actuel de la monnaie : 666€</label>
+							<label>Valeur totale de l'achat : 666€</label>
+							<br>	
+							<input type="hidden" id="priceCurrency" name="priceCurrency" placeholder="" value="">						
+							<button type="submit" class="btn btn-dark active" id="buyCrypto" name="buyCrypto">Acheter</button>
+						</form>
+					</div>
+
+					<div id="sell" class="col-lg-5 col-md-5 col-sm-5 float-right">
+						<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Vendre</h5>
+						<form method="post" class="col-lg-12 col-md-12 col-sm-12 text-center">
+							<select id="nameCrypto" name="nameCrypto">
+								<option value="">Sélectionnez</option>
+								<option value="BTC">BTC - Bitcoin</option>
+								<option value="ETH">ETH - Ethereum</option>
+								<option value="EOS">EOS - EOS</option>
+								<option value="LTC">LTC - Litecoin</option>
+								<option value="XRP">XRP - Ripple</option>
+								<option value="TRX">TRX - Tronix</option>
+								<option value="BCH">BCH - Bitcoin Cash</option>
+								<option value="XVG">XVG - Verge</option>
+								<option value="ETC">ETC - Ethereum Classic</option>
+								<option value="NEO">NEO - NEO</option>
+							</select>
+							<input type="number" id="nbCrypto" name="nbCrypto" placeholder="">
+							<br>
+							<br>
+							<label>Prix actuel de la monnaie : 666€</label>
+							<label>Valeur totale de la vente : 666€</label>
+							<br>							
+							<input type="hidden" id="priceCurrency" name="priceCurrency" placeholder="" value="">	
+							<button type="submit" class="btn btn-dark active" id="sellCrypto" name="sellCrypto">Vendre</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

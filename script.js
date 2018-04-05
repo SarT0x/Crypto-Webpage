@@ -1,57 +1,52 @@
 
-
-
-Highcharts.chart('container', {
-
-    title: {
-        text: 'Courbe des cryptomonnaies'
-    },
-
-    subtitle: {
-        text: 'Source: CrytoCompare.com'
-    },
-
-    yAxis: {
-        title: {
-            text: 'Prix en €'
-        }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2010
-        }
-    },
-
-    series: [{
-        name: 'Bitcoin',
-        data: [8537, 9300, 9278, 7809, 8216, 7563, 8632, 8543]
-    }, {
-        name: 'Ethereum',
-        data: [623, 590, 610, 600, 500, 392, 396, 431]
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
+$(document).ready(function() {
+  var table = [];
+  $.ajax({
+    url:'https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=EUR&allData=true',
+    type:'GET',
+    dataType:'JSON',
+    success:function(data) {
+      console.log(data);
+      for (var elt in data.Data){
+        var point = [];
+        var date = (data.Data[elt].time) * 1000;
+        var prix = data.Data[elt].high;
+        point.push(date);
+        point.push(prix);
+        table.push(point);
+        $.ajax({
+          url:'http://localhost:3000/setup',
+          type:'POST',
+          dataType:'JSON',
+          data:"date=" + date + "&prix=" + prix,
+          success:function(data) {
+            console.log(data);
+          },
+          error:function(data) {
+            console.log(data);
+          }
+        })
+        //
+        //   Highcharts.stockChart('container', {
+        //     rangeSelector: {
+        //       selected: 1
+        //     },
+        //
+        //     title: {
+        //       text: 'Bitcoin'
+        //     },
+        //
+        //     series: [{
+        //       name: 'Prix',
+        //       data: table,
+        //       tooltip: {
+        //         valueDecimals: 1,
+        //         valueSuffix: '€'
+        //       }
+        //     }]
+        //   });
+        // },
+      }
     }
-
+  })
 });
