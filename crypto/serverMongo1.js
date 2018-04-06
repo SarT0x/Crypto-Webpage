@@ -62,12 +62,13 @@ MongoClient.connect('mongodb://localhost:27017',function(err,base){
       });
 
       var wallet = require('./public/json/wallet.json')
-      walletCollection.insert({wallet},function(err,res){
+      walletCollection.insert({wallet},function(err,result){
         if(err){
           res.send(err)
         }else{
           res.json({
-            status:"200"
+            status:"200",
+            data:result
           })
         }
       })
