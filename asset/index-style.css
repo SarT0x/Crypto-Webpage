@@ -19,8 +19,8 @@ body {
 }
 
 .mynav .nav-item {
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:5px;
+	margin-right:5px;
 	border-top:3px solid #007bff;
 	border-bottom:3px solid #007bff;
 }

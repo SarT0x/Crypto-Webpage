@@ -15,6 +15,7 @@
 	<script src="lib/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script src="lib/popper.min.js" type="text/javascript"></script>
 	<script src="lib/bootstrap-4.0.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="https://code.highcharts.com/highcharts.js" type="text/javascript"></script>
 	<script src="asset/index-js.js" type="text/javascript"></script>
 </head>
 <body>
@@ -120,7 +121,7 @@
 						<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Acheter</h5>
 						<form method="post" class="col-lg-12 col-md-12 col-sm-12 text-center">
 							<select id="nameCrypto" name="nameCrypto">
-								<option value="">Sélectionnez</option>
+								<option value="0">Sélectionnez</option>
 								<option value="BTC">BTC - Bitcoin</option>
 								<option value="ETH">ETH - Ethereum</option>
 								<option value="EOS">EOS - EOS</option>
@@ -132,13 +133,14 @@
 								<option value="ETC">ETC - Ethereum Classic</option>
 								<option value="NEO">NEO - NEO</option>
 							</select>
-							<input type="number" id="nbCrypto" name="nbCrypto" placeholder="">
+							<input type="number" id="nbCrypto" name="nbCrypto" placeholder="" required="required">
 							<br>
 							<br>
 							<label>Prix actuel de la monnaie : 666€</label>
 							<label>Valeur totale de l'achat : 666€</label>
 							<br>	
-							<input type="hidden" id="priceCurrency" name="priceCurrency" placeholder="" value="">						
+							<input type="hidden" id="priceCurrency" name="priceCurrency" placeholder="" value="">
+							<input type="hidden" id="priceTotal" name="priceCurrency" placeholder="" value="">							
 							<button type="submit" class="btn btn-dark active" id="buyCrypto" name="buyCrypto">Acheter</button>
 						</form>
 					</div>
@@ -147,7 +149,7 @@
 						<h5 class="col-lg-12 col-md-12 col-sm-12 text-center">Vendre</h5>
 						<form method="post" class="col-lg-12 col-md-12 col-sm-12 text-center">
 							<select id="nameCrypto" name="nameCrypto">
-								<option value="">Sélectionnez</option>
+								<option value="0">Sélectionnez</option>
 								<option value="BTC">BTC - Bitcoin</option>
 								<option value="ETH">ETH - Ethereum</option>
 								<option value="EOS">EOS - EOS</option>
@@ -159,7 +161,7 @@
 								<option value="ETC">ETC - Ethereum Classic</option>
 								<option value="NEO">NEO - NEO</option>
 							</select>
-							<input type="number" id="nbCrypto" name="nbCrypto" placeholder="">
+							<input type="number" id="nbCrypto" name="nbCrypto" placeholder="" required="required">
 							<br>
 							<br>
 							<label>Prix actuel de la monnaie : 666€</label>
