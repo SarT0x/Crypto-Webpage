@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	$('#buyCrypto').on('click', function(e) {
 		e.preventDefault();
 
@@ -22,12 +22,12 @@ $(document).ready(function() {
 				error:function(e) {
 
 				}
-			});					
+			});
 		}
 		else {
 			console.log('champs non conforme !');
 		}
-	})	
+	})
 
 	if($('#graph').length > 0) {
 	    Highcharts.chart('graph', {
@@ -60,7 +60,7 @@ $(document).ready(function() {
 		    },
 		    series: [{
 		        name: 'BTC',
-		        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+		        data: [4393423, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
 		        tooltip: {
 	                valueDecimals: 2
 	            }
