@@ -43,7 +43,18 @@
 			<div class="row">
 				<div id="btnCurrency" class="col-lg-12 col-md-12 col-sm-12 text-center">
 					<h5 class="text-center">Affichage des valeurs des différentes cryptomonnaies</h5>
-					
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<button id="btnBTC" class="btn btn-dark active" data-toggle="tooltip" data-placement="bottom" title="Bitcoin">BTC</button>
+						<button id="btnETH" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Ethereum">ETH</button>
+						<button id="btnEOS" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="EOS">EOS</button>
+						<button id="btnLTC" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Litecoin">LTC</button>
+						<button id="btnXRP" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Ripple">XRP</button>
+						<button id="btnTRX" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Tronix">TRX</button>
+						<button id="btnBCH" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Bitcoin Cash">BCH</button>
+						<button id="btnXVG" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Verge">XVG</button>
+						<button id="btnETC" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Ethereum Classic">ETC</button>
+						<button id="btnNEO" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="NEO">NEO</button>
+					</div>
 				</div>
 
 				<div id="graph" class="col-lg-12 col-md-12 col-sm-12">
@@ -103,5 +114,25 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		$(document).ready(function() {
+			$('.btn-dark').on('click', function(e) {
+				e.preventDefault();
+				if($(this).hasClass('active')) {
+					$(this).removeClass('active');
+					$(this).tooltip('hide');
+				}
+				else {
+					$(this).addClass('active');
+					$(this).tooltip('hide');
+				}
+			})
+
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+			})
+		})
+	</script>
 </body>
 </html>
